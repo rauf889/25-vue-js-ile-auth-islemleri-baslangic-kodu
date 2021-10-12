@@ -9,7 +9,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state: {
         token : "",
-        fbAPIKey : "AIzaSyBjaEaL05ksKCA_yqOQQwmJmhiU6wyywwo",
+        fbAPIKey : "KEY",
     },
     mutations: {
         setToken(state, token){
@@ -49,7 +49,7 @@ const store = new Vuex.Store({
                     authLink = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key="
                 }
                 return axios.post(
-                    authLink + "AIzaSyBjaEaL05ksKCA_yqOQQwmJmhiU6wyywwo",
+                    authLink + "KEY",
                     {email : authData.email, password : authData.password, returnSecureToken: true}
                 ).then(response =>{
                     console.log(response.data)
